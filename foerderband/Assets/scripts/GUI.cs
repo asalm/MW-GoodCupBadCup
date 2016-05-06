@@ -12,6 +12,9 @@ public class GUI : MonoBehaviour {
 
     public Texture2D lives;
 
+	private GUIStyle fontStyle = new GUIStyle();
+	public GUIStyle pauseButton = new GUIStyle();
+
     void start() {
         isPaused = false;
     }
@@ -26,10 +29,10 @@ public class GUI : MonoBehaviour {
     }
 
     void OnGUI() {
-        GUILayout.BeginArea(new Rect(Screen.width - 105, 5, 100, 80));
+        GUILayout.BeginArea(new Rect(Screen.width - 115, 5, 100, 80));
         if (!isPaused)
         {
-            if (GUILayout.Button("Pause"))
+			if (GUILayout.Button("Pause", pauseButton))
             {
                 Time.timeScale = 0;
                 isPaused = true;
@@ -37,7 +40,7 @@ public class GUI : MonoBehaviour {
         }
         if (isPaused)
         {
-            if (GUILayout.Button("Weiterspielen"))
+			if (GUILayout.Button("Weiter", pauseButton))
             {
                 Time.timeScale = 1;
                 isPaused = false;
@@ -48,12 +51,13 @@ public class GUI : MonoBehaviour {
         {
             Application.LoadLevel(2);
         }
-        GUILayout.Label("Welle: " + wave);
+		fontStyle.fontSize = 20;
+        GUILayout.Label("Welle: " + wave, fontStyle);
         GUILayout.EndArea();
 
         GUILayout.BeginArea(new Rect(5, 38, 100, 80));
 
-        GUILayout.Label("Score: " + score);
+        GUILayout.Label("Score: " + score, fontStyle);
         GUILayout.EndArea();
 
         drawLives();
