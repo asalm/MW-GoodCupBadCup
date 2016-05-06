@@ -26,6 +26,7 @@ public class End_GUI : MonoBehaviour {
 			GUI.timeAnz =0;
 			GUI.score = 0;
 			score = 0;
+			GUI.wave = 0;
 		}
 		GUILayout.EndArea ();
 	}
