@@ -14,6 +14,7 @@ public class patternDrop : MonoBehaviour {
 
 	//Number of Objects in one Pattern
 	public int level = 3; 
+	private int levelCounter = 0;
 	public int maxLevel = 18;
 	private int counter = 0;
 
@@ -53,7 +54,12 @@ public class patternDrop : MonoBehaviour {
 	public void spawnPattern(){
 		GUI.wave++;
 		//time = 0.0f;
-		level++; //Difficulty increases with each spawn (max 18)
+		levelCounter++;
+		if (levelCounter == 4) {
+			level++; //Difficulty increases with every fourth spawn (max 18)
+			levelCounter = 0;
+		}
+
 
 		//spawn one Pattern
 		while(counter < level) {

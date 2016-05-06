@@ -23,6 +23,10 @@ public class Start_GUI : MonoBehaviour {
         if (GUILayout.Button("Start"))
 		{
             Application.LoadLevel(1);
+			GUI.timeAnz =0;
+			GUI.score = 0;
+			score = 0;
+			GUI.wave = 0;
         }
 		if (GUILayout.Button("Back to the Menu"))
 		{
