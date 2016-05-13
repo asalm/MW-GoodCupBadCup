@@ -1,6 +1,12 @@
 ﻿using UnityEngine;
 using System.Collections;
 
+/*
+ * This script will show the total score of the player and the way he/she reached
+ * and offers the function to get back to game-menu
+ *
+ */
+
 public class End_GUI : MonoBehaviour {
 	private int score;
 
