@@ -37,16 +37,31 @@ public class GUI : MonoBehaviour {
                 Time.timeScale = 0;
                 isPaused = true;
             }
-        }
+        } else
+			GUILayout.Label ("Pausiert", fontStyle);
+		GUILayout.EndArea ();
+		GUILayout.BeginArea(new Rect(Screen.width/2-50, Screen.height/5.5f, 200, 300));
         if (isPaused)
         {
-			if (GUILayout.Button("Weiter", pauseButton))
-            {
-                Time.timeScale = 1;
-                isPaused = false;
-            }
-        }
 
+			if (GUILayout.Button("Weiter", pauseButton))
+			{
+				Time.timeScale = 1;
+				isPaused = false;
+			}
+			GUILayout.Label("");
+			if(GUILayout.Button ("Menü", pauseButton))
+			{
+				Application.LoadLevel(0);
+				Time.timeScale = 1;
+			}
+
+
+
+        }
+		
+		GUILayout.EndArea();
+		GUILayout.BeginArea (new Rect (Screen.width - 115, 60, 100, 80));
         if (leben <= 0)
         {
             Application.LoadLevel(2);
@@ -55,7 +70,7 @@ public class GUI : MonoBehaviour {
         GUILayout.Label("Welle: " + wave, fontStyle);
         GUILayout.EndArea();
 
-        GUILayout.BeginArea(new Rect(5, 38, 100, 80));
+        GUILayout.BeginArea(new Rect(5, 60, 100, 80));
 
         GUILayout.Label("Score: " + score, fontStyle);
         GUILayout.EndArea();
