@@ -15,7 +15,7 @@ public class GUI : MonoBehaviour {
 	
 	public Texture2D lives;
 	
-	private GUIStyle fontStyle = new GUIStyle();
+	public GUIStyle fontStyle = new GUIStyle();
 	public GUIStyle pauseButton = new GUIStyle();
 	
 	void start() {
@@ -70,7 +70,7 @@ public class GUI : MonoBehaviour {
 		{
 			Application.LoadLevel(2);
 		}
-		fontStyle.fontSize = 20;
+		//fontStyle.fontSize = 20;
 		GUILayout.Label("Welle: " + wave, fontStyle);
 		GUILayout.EndArea();
 		
