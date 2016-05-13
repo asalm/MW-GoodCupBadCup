@@ -12,6 +12,9 @@ public class GUI : MonoBehaviour {
 
     public Texture2D lives;
 
+	private GUIStyle fontStyle = new GUIStyle();
+	public GUIStyle pauseButton = new GUIStyle();
+
     void start() {
         isPaused = false;
     }
@@ -26,34 +29,50 @@ public class GUI : MonoBehaviour {
     }
 
     void OnGUI() {
-        GUILayout.BeginArea(new Rect(Screen.width - 105, 5, 100, 80));
+        GUILayout.BeginArea(new Rect(Screen.width - 115, 5, 100, 80));
         if (!isPaused)
         {
-            if (GUILayout.Button("Pause"))
+			if (GUILayout.Button("Pause", pauseButton))
             {
                 Time.timeScale = 0;
                 isPaused = true;
             }
-        }
+        } else
+			GUILayout.Label ("Pausiert", fontStyle);
+		GUILayout.EndArea ();
+		GUILayout.BeginArea(new Rect(Screen.width/2-50, Screen.height/5.5f, 200, 300));
         if (isPaused)
         {
-            if (GUILayout.Button("Weiterspielen"))
-            {
-                Time.timeScale = 1;
-                isPaused = false;
-            }
-        }
 
+			if (GUILayout.Button("Weiter", pauseButton))
+			{
+				Time.timeScale = 1;
+				isPaused = false;
+			}
+			GUILayout.Label("");
+			if(GUILayout.Button ("Menü", pauseButton))
+			{
+				Application.LoadLevel(0);
+				Time.timeScale = 1;
+			}
+
+
+
+        }
+		
+		GUILayout.EndArea();
+		GUILayout.BeginArea (new Rect (Screen.width - 115, 60, 100, 80));
         if (leben <= 0)
         {
             Application.LoadLevel(2);
         }
-        GUILayout.Label("Welle: " + wave);
+		fontStyle.fontSize = 20;
+        GUILayout.Label("Welle: " + wave, fontStyle);
         GUILayout.EndArea();
 
-        GUILayout.BeginArea(new Rect(5, 38, 100, 80));
+        GUILayout.BeginArea(new Rect(5, 60, 100, 80));
 
-        GUILayout.Label("Score: " + score);
+        GUILayout.Label("Score: " + score, fontStyle);
         GUILayout.EndArea();
 
         drawLives();
