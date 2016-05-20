@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ﻿<Properties>
 <<<<<<< HEAD
   <MonoDevelop.Ide.Workspace />
@@ -10,6 +11,15 @@
     <Files>
       <File FileName="Assets\scripts\GUI.cs" Line="51" Column="5" />
       <File FileName="Assets\scripts\End_GUI.cs" Line="24" Column="4" />
+>>>>>>> origin/master
+=======
+﻿<Properties StartupItem="Assembly-CSharp.csproj">
+  <MonoDevelop.Ide.Workspace />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\End_GUI.cs">
+    <Files>
+      <File FileName="Assets\scripts\GUI.cs" Line="18" Column="2" />
+      <File FileName="Assets\scripts\Start_GUI.cs" Line="23" Column="159" />
+      <File FileName="Assets\scripts\End_GUI.cs" Line="27" Column="136" />
 >>>>>>> origin/master
     </Files>
   </MonoDevelop.Ide.Workbench>
