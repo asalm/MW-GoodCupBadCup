@@ -1,11 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-/*
- * This script will rotate the screenview of the player 
- * 
- */
-
 public class InvertScreen : MonoBehaviour 
 {
 	public GameObject descam;

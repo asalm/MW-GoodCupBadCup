@@ -1,17 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-/*
- * This script will show the total score of the player and the way he/she reached
- * and offers the function to get back to game-menu
- *
- */
-
 public class End_GUI : MonoBehaviour {
 	private int score;
-
-	public GUIStyle fontStyle = new GUIStyle();
-	public GUIStyle pauseButton = new GUIStyle();
 
 	void start(){
 	}
@@ -24,15 +15,17 @@ public class End_GUI : MonoBehaviour {
 	void OnGUI() {
 		score = GUI.score * GUI.wave;
         int buttonWidth = 200, buttonHeight = 100;
-		GUILayout.BeginArea (new Rect (Screen.width-Screen.width/2 - buttonWidth/2, Screen.height - Screen.height / 2 - buttonHeight / 2, 300, 500));
-		GUILayout.Label ("Erreichte Welle: " + GUI.wave, fontStyle);
-		GUILayout.Label ("Erreichter Punktestand: " + GUI.score, fontStyle);
-		GUILayout.Label("Final Score: " + score, fontStyle);
+		GUILayout.BeginArea (new Rect (Screen.width-Screen.width/2 - buttonWidth/2, Screen.height - Screen.height / 2 - buttonHeight / 2, buttonWidth, buttonHeight));
+		GUILayout.Label ("Erreichte Welle: " + GUI.wave);
+		GUILayout.Label ("Erreichter Punktestand: " + GUI.score);
+		GUILayout.Label("Final Score: " + score);
 
-        if (GUILayout.Button("Back to the Menu", pauseButton))
+        if (GUILayout.Button("Back to the Menu"))
 		{
             Application.LoadLevel(0);
-
+			GUI.timeAnz =0;
+			GUI.score = 0;
+			score = 0;
 		}
 		GUILayout.EndArea ();
 	}
