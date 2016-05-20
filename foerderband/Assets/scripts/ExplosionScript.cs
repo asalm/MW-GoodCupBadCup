@@ -6,11 +6,17 @@ using System.Collections;
 */
 
 public class ExplosionScript : MonoBehaviour {
-		
+
+	/*
+	*Bomb explodes when it's touched
+	*/
 	void OnMouseDrag(){
 		explosion ();
 	}
-	
+
+	/*
+	* Bomb explodes when it collides with any object
+	*/
 	void OnCollisionEnter(Collision collision){
 		
 		if(collision.gameObject.CompareTag("Good")){
@@ -21,7 +27,11 @@ public class ExplosionScript : MonoBehaviour {
 			explosion();
 		}
 	}
-	
+
+
+	/*
+	* Bomb's collider will scale that fast it will work as explosion
+	*/
 	void explosion(){
 		//Object turns invisible and expands rapidly
 		GetComponent<Renderer>().enabled = false;

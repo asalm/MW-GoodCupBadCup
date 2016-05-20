@@ -9,7 +9,11 @@ public class Start_GUI : MonoBehaviour {
 	public float time = 0;
 	public int timeAnz = 0;
 	
-	
+	public GUIStyle fontStyle = new GUIStyle();
+	public GUIStyle pauseButton = new GUIStyle();
+
+	private float screenWidth = Screen.width;
+	private float screenHeight = Screen.height;
 	
 	void start(){	
 	}
@@ -18,13 +22,24 @@ public class Start_GUI : MonoBehaviour {
 	}
 	
 	void OnGUI() {
-        int buttonWidth = 200, buttonHeight = 100;
-        GUILayout.BeginArea(new Rect(Screen.width - Screen.width / 2 - buttonWidth / 2, Screen.height - Screen.height / 2 - buttonHeight / 2, buttonWidth, buttonHeight));
-        if (GUILayout.Button("Start"))
+		pauseButton.fixedWidth = screenWidth / 6;
+		pauseButton.fixedHeight = screenHeight / 6;
+
+		Vector2 contentOffset = pauseButton.contentOffset;
+		contentOffset.y = pauseButton.fixedHeight/3.3333f;
+		pauseButton.contentOffset = contentOffset;
+
+        GUILayout.BeginArea(new Rect(Screen.width - Screen.width / 2 - pauseButton.fixedWidth / 2, Screen.height - Screen.height / 2 - pauseButton.fixedHeight / 2, pauseButton.fixedWidth, 500));
+        if (GUILayout.Button("Start", pauseButton))
 		{
             Application.LoadLevel(1);
+			GUI.timeAnz =0;
+			GUI.score = 0;
+			score = 0;
+			GUI.wave = 0;
         }
-		if (GUILayout.Button("Back to the Menu"))
+		GUILayout.Label ("");
+		if (GUILayout.Button("Back to the Menu", pauseButton))
 		{
             Debug.Log("NADA!");
 		}

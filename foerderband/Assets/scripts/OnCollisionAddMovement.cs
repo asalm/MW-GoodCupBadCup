@@ -4,7 +4,7 @@ using System.Collections.Generic;
 
 /*
 * Gameobjects on the Treadmill get Movement from Treadmill-Script
-* Gameobjects who fall off the Treadmill loose Movement 
+* Gameobjects who fall off the Treadmill loose Movementspeed 
 */
 
 public class OnCollisionAddMovement : MonoBehaviour {
