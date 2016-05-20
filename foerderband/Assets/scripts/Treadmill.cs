@@ -2,8 +2,11 @@
 using System.Collections;
 
 public class Treadmill : MonoBehaviour {
-    //Skript, was die Laufbandbewegung emuliert
-    //jedes Objekt, was das Laufband berührt, bekommt dieses Skript zugewiesen
+
+	/*
+	* This script emulates movement of the treadmill and every object that collides with the treadmill gets this scipt
+	*/
+
     private float publicSpeed = 0;
 
 	void Start () {

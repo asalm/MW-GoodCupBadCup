@@ -2,7 +2,7 @@
 using System.Collections;
 
 /*
- * Process Objects that pass the GoodCollider
+ * Process Objects that pass the GoodCollider and increases score (if object was a good cup) or decreases life (if obeject was a bad cup)
  */
 
 public class scoreObserverGood : MonoBehaviour {

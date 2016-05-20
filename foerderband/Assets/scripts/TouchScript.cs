@@ -15,7 +15,9 @@ public class TouchScript : MonoBehaviour {
 		rb.freezeRotation = true;
 	}
 
-
+	/*
+	* if object is dragged by finger, the object beneath will move to new fingerposition
+	*/
 	void OnMouseDrag()
 	{
 		Vector3 v3 = Input.mousePosition;

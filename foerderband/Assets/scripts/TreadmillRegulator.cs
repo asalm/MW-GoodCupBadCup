@@ -2,7 +2,10 @@
 using System.Collections;
 
 public class TreadmillRegulator : MonoBehaviour {
-	//da jedes Objekt die gleiche Geschwindigkeit haben sollte, beziehen alle Objekte (mit Treadmill als Komponente) ihre Geschwindigkeit aus diesem Skript
+	/*
+	* this script will give every object a static speed
+	*/
+
 	private float speed = 3.0f;
 	private float deltaSpeed = 0.5f;
 	public float slowDownStart = 0f;
