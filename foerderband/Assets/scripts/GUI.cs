@@ -14,7 +14,9 @@ public class GUI : MonoBehaviour {
 	private float screenHeight = Screen.height;
 	
 	public Texture2D lives;
-	
+
+	//Die Styles die die Schrift und Buttons.
+	//Können in Unity dierekt verändert werden, sofern imm Scrpit nichts angebeben wurde für den wert
 	public GUIStyle fontStyle = new GUIStyle();
 	public GUIStyle pauseButton = new GUIStyle();
 	
@@ -23,6 +25,7 @@ public class GUI : MonoBehaviour {
 	}
 	
 	void Update() {
+		//Zeit wird hoch gezählt. Mit Hilfe der deltatime. 
 		time = time + Time.deltaTime;
 		if (time >= 1.0f) {
 			timeAnz += 1;
@@ -33,9 +36,13 @@ public class GUI : MonoBehaviour {
 	}
 	
 	void OnGUI() {
+		//Ist in jeder GUI gleich:
+		//Der Pauebutton bekommt eine dynamische Größe entsprechend der Bildschirmgröße
 		pauseButton.fixedWidth = screenWidth / 6;
 		pauseButton.fixedHeight = screenHeight / 6;
 
+		//Ebenfalls in jeder GUI gleich:
+		//Schrift wird im Button positioiert
 		Vector2 contentOffset = pauseButton.contentOffset;
 		contentOffset.y = pauseButton.fixedHeight/3.3333f;
 		pauseButton.contentOffset = contentOffset;
@@ -45,12 +52,14 @@ public class GUI : MonoBehaviour {
 		GUILayout.BeginArea(new Rect(Screen.width - Screen.width/6, 5, pauseButton.fixedWidth, pauseButton.fixedHeight));
 		if (!isPaused)
 		{
+			//Der Pausebuuton oben rechts in der Ecke. 
 			if (GUILayout.Button("Pause", pauseButton))
 			{
 				Time.timeScale = 0;
 				isPaused = true;
 			}
 		} else
+			//Ist der Pausebutton gedrückt worden, verschwidet dieser und diese Schrift erscheint
 			GUILayout.Label ("Pausiert", fontStyle);
 		GUILayout.EndArea ();
 		
@@ -58,13 +67,15 @@ public class GUI : MonoBehaviour {
 		GUILayout.BeginArea(new Rect(Screen.width/2-pauseButton.fixedWidth/2, Screen.height/5.5f, pauseButton.fixedWidth, pauseButton.fixedHeight*2.5f));
 		if (isPaused)
 		{
-			
+			//Ist das Spiel pausiert erscheint in der Mitte den Bildschirms ein Menü
+			//Dies ist der Button der das Spiel fortsetzt
 			if (GUILayout.Button("Weiter", pauseButton))
 			{
 				Time.timeScale = 1;
 				isPaused = false;
 			}
 			GUILayout.Label("");
+			//Dies ist de Button, der zurück zum Menü fürht
 			if(GUILayout.Button ("Menü", pauseButton))
 			{
 				Application.LoadLevel(0);
@@ -79,11 +90,12 @@ public class GUI : MonoBehaviour {
 	
 		GUILayout.BeginArea(new Rect(5, 60, 100, 80));
 
+		//Wenn alle Leben weg sind wird der Gema Over Screen geladen
 		if (leben <= 0)
 		{
 			Application.LoadLevel(2);
 		}
-
+		//Oben Links die anzeige der Werte
 		GUILayout.Label("Score: " + score, fontStyle);
 		GUILayout.Label ("");
 		GUILayout.Label("Welle: " + wave, fontStyle);
@@ -91,7 +103,9 @@ public class GUI : MonoBehaviour {
 		
 		drawLives();
 	}
-	
+
+
+	//Die Herzen <3
 	private void drawLives()
 	{
 		GUILayout.BeginHorizontal();
