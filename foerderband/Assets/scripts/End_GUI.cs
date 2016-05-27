@@ -42,7 +42,7 @@ public class End_GUI : MonoBehaviour {
 		GUILayout.Label ("Erreichter Punktestand: " + GUI.score, fontStyle);
 		GUILayout.Label("Final Score: " + score, fontStyle);
 
-        if (GUILayout.Button("Back to the Menu", pauseButton))
+        if (GUILayout.Button("Menü", pauseButton))
 		{
 			//Wieder zum Menü
             Application.LoadLevel(0);

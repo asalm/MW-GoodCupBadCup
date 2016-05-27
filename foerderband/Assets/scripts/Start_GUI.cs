@@ -43,7 +43,7 @@ public class Start_GUI : MonoBehaviour {
         }
 		GUILayout.Label ("");
 		//zurück zum Obermenü aller Spiele
-		if (GUILayout.Button("Back to the Menu", pauseButton))
+		if (GUILayout.Button("Hauptmenü", pauseButton))
 		{
             Debug.Log("NADA!");
 		}

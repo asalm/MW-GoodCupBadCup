@@ -45,10 +45,10 @@ public class InvertScreen : MonoBehaviour
 			mainCam.transform.Rotate (0,yrot,0, Space.World);
 			i++;
 
-			//pause game while rotation animation
-			GameObject.Find("Main Camera").GetComponent<GUI>().isPaused = true;
+			//pause game while rotation animationTime.timeScale = 0;
+			Time.timeScale = 0;
             if (i == max){
-                GameObject.Find("Main Camera").GetComponent<GUI>().isPaused = false;
+				Time.timeScale = 1;
                 if (descam.Equals(falseposCam)) {
 					descam = trueposCam;
 				} else {

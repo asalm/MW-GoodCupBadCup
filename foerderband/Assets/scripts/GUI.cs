@@ -90,7 +90,7 @@ public class GUI : MonoBehaviour {
 		
 		GUILayout.EndArea();
 	
-		GUILayout.BeginArea(new Rect(5, 60, 150, 300));
+		GUILayout.BeginArea(new Rect(5, 60, 350, 300));
 
 		//Wenn alle Leben weg sind wird der Gema Over Screen geladen
 		if (leben <= 0)
