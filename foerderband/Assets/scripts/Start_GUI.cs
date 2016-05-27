@@ -24,6 +24,8 @@ public class Start_GUI : MonoBehaviour {
 	void OnGUI() {
 		pauseButton.fixedWidth = screenWidth / 6;
 		pauseButton.fixedHeight = screenHeight / 6;
+		pauseButton.fontSize = (int)screenWidth / 38;
+		fontStyle.fontSize = (int)screenWidth / 38;
 
 		Vector2 contentOffset = pauseButton.contentOffset;
 		contentOffset.y = pauseButton.fixedHeight/3.3333f;

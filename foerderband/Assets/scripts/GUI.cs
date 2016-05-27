@@ -40,6 +40,8 @@ public class GUI : MonoBehaviour {
 		//Der Pauebutton bekommt eine dynamische Größe entsprechend der Bildschirmgröße
 		pauseButton.fixedWidth = screenWidth / 6;
 		pauseButton.fixedHeight = screenHeight / 6;
+		pauseButton.fontSize = (int)screenWidth / 38;
+		fontStyle.fontSize = (int)screenWidth / 38;
 
 		//Ebenfalls in jeder GUI gleich:
 		//Schrift wird im Button positioiert
@@ -88,7 +90,7 @@ public class GUI : MonoBehaviour {
 		
 		GUILayout.EndArea();
 	
-		GUILayout.BeginArea(new Rect(5, 60, 100, 80));
+		GUILayout.BeginArea(new Rect(5, 60, 150, 300));
 
 		//Wenn alle Leben weg sind wird der Gema Over Screen geladen
 		if (leben <= 0)
