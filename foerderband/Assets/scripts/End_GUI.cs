@@ -36,7 +36,7 @@ public class End_GUI : MonoBehaviour {
 		pauseButton.contentOffset = contentOffset;
 
 
-		GUILayout.BeginArea (new Rect (Screen.width-Screen.width/2 - pauseButton.fixedWidth/2, Screen.height - Screen.height / 2 - pauseButton.fixedHeight / 2, 300, 500));
+		GUILayout.BeginArea (new Rect (Screen.width-Screen.width/2 - pauseButton.fixedWidth/2, Screen.height - Screen.height / 2 - pauseButton.fixedHeight / 2, 500, 500));
 		//Die erreichten Werte werden untereinander angezeigt
 		GUILayout.Label ("Erreichte Welle: " + GUI.wave, fontStyle);
 		GUILayout.Label ("Erreichter Punktestand: " + GUI.score, fontStyle);

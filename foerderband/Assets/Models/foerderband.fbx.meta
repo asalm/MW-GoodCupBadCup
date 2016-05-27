@@ -3,7 +3,7 @@ guid: af0adfa3970742848848d83e4a988492
 timeCreated: 1458341194
 licenseType: Free
 ModelImporter:
-  serializedVersion: 19
+  serializedVersion: 18
   fileIDToRecycleName:
     100000: Antrieb_objekte
     100002: //RootNode
@@ -151,6 +151,34 @@ ModelImporter:
     4300050: "W\xFCrfel_25"
     4300052: "W\xFCrfel_26"
     4300054: Objekt
+    6400000: Objekt
+    6400002: "W\xFCrfel_0"
+    6400004: "W\xFCrfel_1"
+    6400006: "W\xFCrfel_10"
+    6400008: "W\xFCrfel_11"
+    6400010: "W\xFCrfel_12"
+    6400012: "W\xFCrfel_13"
+    6400014: "W\xFCrfel_14"
+    6400016: "W\xFCrfel_15"
+    6400018: "W\xFCrfel_16"
+    6400020: "W\xFCrfel_17"
+    6400022: "W\xFCrfel_18"
+    6400024: "W\xFCrfel_19"
+    6400026: "W\xFCrfel_2"
+    6400028: "W\xFCrfel_20"
+    6400030: "W\xFCrfel_21"
+    6400032: "W\xFCrfel_22"
+    6400034: "W\xFCrfel_23"
+    6400036: "W\xFCrfel_24"
+    6400038: "W\xFCrfel_25"
+    6400040: "W\xFCrfel_26"
+    6400042: "W\xFCrfel_3"
+    6400044: "W\xFCrfel_4"
+    6400046: "W\xFCrfel_5"
+    6400048: "W\xFCrfel_6"
+    6400050: "W\xFCrfel_7"
+    6400052: "W\xFCrfel_8"
+    6400054: "W\xFCrfel_9"
     7400000: Basis
     9500000: //RootNode
   materials:
@@ -160,7 +188,6 @@ ModelImporter:
   animations:
     legacyGenerateAnimations: 4
     bakeSimulation: 0
-    resampleRotations: 1
     optimizeGameObjects: 0
     motionNodeName: 
     animationImportErrors: 
@@ -168,9 +195,9 @@ ModelImporter:
     animationRetargetingWarnings: 
     animationDoRetargetingWarnings: 0
     animationCompression: 1
-    animationRotationError: 0.5
-    animationPositionError: 0.5
-    animationScaleError: 0.5
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
     animationWrapMode: 0
     extraExposedTransformPaths: []
     clipAnimations: []
@@ -194,6 +221,7 @@ ModelImporter:
     useFileScale: 1
   tangentSpace:
     normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
     normalImportMode: 0
     tangentImportMode: 3
   importAnimation: 1
@@ -201,12 +229,12 @@ ModelImporter:
   humanDescription:
     human: []
     skeleton: []
-    armTwist: 0.5
-    foreArmTwist: 0.5
-    upperLegTwist: 0.5
-    legTwist: 0.5
-    armStretch: 0.05
-    legStretch: 0.05
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
     feetSpacing: 0
     rootMotionBoneName: 
     hasTranslationDoF: 0

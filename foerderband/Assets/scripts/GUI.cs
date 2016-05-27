@@ -13,7 +13,7 @@ public class GUI : MonoBehaviour {
 	private float screenWidth = Screen.width;
 	private float screenHeight = Screen.height;
 	
-	public Texture2D lives;
+	public GUIStyle lives = new GUIStyle ();
 
 	//Die Styles die die Schrift und Buttons.
 	//Können in Unity dierekt verändert werden, sofern imm Scrpit nichts angebeben wurde für den wert
@@ -90,7 +90,7 @@ public class GUI : MonoBehaviour {
 		
 		GUILayout.EndArea();
 	
-		GUILayout.BeginArea(new Rect(5, 60, 350, 300));
+		GUILayout.BeginArea(new Rect(5, Screen.height/6, 350, 300));
 
 		//Wenn alle Leben weg sind wird der Gema Over Screen geladen
 		if (leben <= 0)
@@ -113,8 +113,10 @@ public class GUI : MonoBehaviour {
 		GUILayout.BeginHorizontal();
 		for (int i = 0; i < leben; i++)
 		{
-			GUILayout.Label(lives);
-			
+			lives.fixedWidth = screenWidth/15;
+			lives.fixedHeight = screenHeight/9;
+
+			GUILayout.Label(" ", lives);
 		}
 		GUILayout.EndHorizontal();
 		

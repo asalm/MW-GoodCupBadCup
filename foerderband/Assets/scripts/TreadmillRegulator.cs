@@ -13,7 +13,7 @@ public class TreadmillRegulator : MonoBehaviour {
 	
 	public float publicSpeed;
 	private float slowSpeed = 1f;
-	public float slowDownDuration = 10;
+	public float slowDownDuration = 3;
 	
 	void Start () {
 		if (slowDownActive) {
