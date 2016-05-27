@@ -33,13 +33,16 @@ public class End_GUI : MonoBehaviour {
 		contentOffset.y = pauseButton.fixedHeight/3.3333f;
 		pauseButton.contentOffset = contentOffset;
 
+
 		GUILayout.BeginArea (new Rect (Screen.width-Screen.width/2 - pauseButton.fixedWidth/2, Screen.height - Screen.height / 2 - pauseButton.fixedHeight / 2, 300, 500));
+		//Die erreichten Werte werden untereinander angezeigt
 		GUILayout.Label ("Erreichte Welle: " + GUI.wave, fontStyle);
 		GUILayout.Label ("Erreichter Punktestand: " + GUI.score, fontStyle);
 		GUILayout.Label("Final Score: " + score, fontStyle);
 
         if (GUILayout.Button("Back to the Menu", pauseButton))
 		{
+			//Wieder zum Menü
             Application.LoadLevel(0);
 
 		}

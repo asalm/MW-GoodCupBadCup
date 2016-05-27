@@ -32,6 +32,7 @@ public class Start_GUI : MonoBehaviour {
         GUILayout.BeginArea(new Rect(Screen.width - Screen.width / 2 - pauseButton.fixedWidth / 2, Screen.height - Screen.height / 2 - pauseButton.fixedHeight / 2, pauseButton.fixedWidth, 500));
         if (GUILayout.Button("Start", pauseButton))
 		{
+			//Wird ein neues Spiel gestartet werden erst alle Werte zurück gesetzt
             Application.LoadLevel(1);
 			GUI.timeAnz =0;
 			GUI.score = 0;
@@ -39,6 +40,7 @@ public class Start_GUI : MonoBehaviour {
 			GUI.wave = 0;
         }
 		GUILayout.Label ("");
+		//zurück zum Obermenü aller Spiele
 		if (GUILayout.Button("Back to the Menu", pauseButton))
 		{
             Debug.Log("NADA!");
