@@ -12,6 +12,10 @@ public class GUI : MonoBehaviour {
 	
 	private float screenWidth = Screen.width;
 	private float screenHeight = Screen.height;
+
+	public Texture liveDown;
+	public int lifeCounter;
+	private float heightTimer = 0;
 	
 	public GUIStyle lives = new GUIStyle ();
 
@@ -102,7 +106,15 @@ public class GUI : MonoBehaviour {
 		GUILayout.Label ("");
 		GUILayout.Label("Welle: " + wave, fontStyle);
 		GUILayout.EndArea();
-		
+
+		if (lifeCounter > timeAnz) {
+			GUILayout.BeginArea (new Rect (Screen.width / 3, Screen.height / 3+heightTimer, 300, 300));
+			GUILayout.Label (liveDown);
+			GUILayout.EndArea ();
+			heightTimer -= 0.5f;
+		} else
+			heightTimer = 0;
+
 		drawLives();
 	}
 

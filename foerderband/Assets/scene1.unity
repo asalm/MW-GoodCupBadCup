@@ -581,6 +581,8 @@ MonoBehaviour:
   isPaused: 0
   leben: 3
   time: 0
+  liveDown: {fileID: 0}
+  lifeCounter: 0
   lives:
     m_Name: 
     m_Normal:
@@ -1173,6 +1175,8 @@ MonoBehaviour:
   isPaused: 0
   leben: 3
   time: 0
+  liveDown: {fileID: 2800000, guid: 3004060f50a910143a90c30a7e644fc4, type: 3}
+  lifeCounter: 0
   lives:
     m_Name: 
     m_Normal:
@@ -1560,6 +1564,8 @@ MonoBehaviour:
   isPaused: 0
   leben: 3
   time: 0
+  liveDown: {fileID: 0}
+  lifeCounter: 0
   lives:
     m_Name: 
     m_Normal:
