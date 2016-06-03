@@ -10,10 +10,15 @@ public class ExplosionScript : MonoBehaviour {
 	/*
 	*Bomb explodes when it's touched
 	*/
+	void Start(){
+	}
 	void OnMouseDrag(){
 		explosion ();
 	}
-
+	void OnMouseClick(){
+		explosion ();
+	}
+		
 	/*
 	* Bomb explodes when it collides with any object
 	*/

@@ -78,7 +78,7 @@ GameObject:
   - 136: {fileID: 13600238}
   - 54: {fileID: 5495092}
   - 114: {fileID: 11449410}
-  - 114: {fileID: 11493880}
+  - 114: {fileID: 11498712}
   m_Layer: 0
   m_Name: Bomb
   m_TagString: PowerUp
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
---- !u!114 &11493880
+--- !u!114 &11498712
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}

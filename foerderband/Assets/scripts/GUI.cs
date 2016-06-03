@@ -35,8 +35,7 @@ public class GUI : MonoBehaviour {
 			timeAnz += 1;
 			time = 0;
 		}
-		
-		Debug.Log ("Width:  " + screenWidth);
+
 	}
 	
 	void OnGUI() {
