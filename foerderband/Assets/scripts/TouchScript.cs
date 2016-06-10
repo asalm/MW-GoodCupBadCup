@@ -4,7 +4,7 @@ using System.Collections;
 public class TouchScript : MonoBehaviour {
 
 	private Rigidbody rb;
-	private float z = 12f;
+	private float z = 13f;
 	private static Camera main;
 	public int speed = 50; 
 
