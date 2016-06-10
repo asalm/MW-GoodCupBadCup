@@ -30,4 +30,9 @@ public class CupCounter : MonoBehaviour {
 		destroyedCounter = c;
 	}
 
+    public void updateCounter()
+    {
+        destroyedCounter++;
+    }
+
 }
