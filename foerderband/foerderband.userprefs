@@ -1,16 +1,13 @@
-﻿<Properties StartupItem="Assembly-CSharp.csproj">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="Unity.Instance.Unity Editor" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\TouchScript.cs">
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\scripts\scoreObserverGood.cs">
     <Files>
-      <File FileName="Assets\scripts\TouchScript.cs" Line="7" Column="22" />
-      <File FileName="Assets\scripts\patternDrop.cs" Line="54" Column="27" />
-      <File FileName="Assets\scripts\scoreObserverGood.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\scoreObserverGood.cs" Line="15" Column="87" />
       <File FileName="Assets\scripts\TreadmillRegulator.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\End_GUI.cs" Line="1" Column="1" />
       <File FileName="Assets\scripts\InvertScreen.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\GUI.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\scoreObserverBad.cs" Line="1" Column="1" />
-      <File FileName="Assets\scripts\CupCounter.cs" Line="1" Column="1" />
+      <File FileName="Assets\scripts\GUI.cs" Line="114" Column="17" />
+      <File FileName="Assets\scripts\scoreObserverBad.cs" Line="38" Column="65" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

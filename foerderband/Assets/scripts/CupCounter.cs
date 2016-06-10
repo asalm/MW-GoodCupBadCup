@@ -18,14 +18,9 @@ public class CupCounter : MonoBehaviour {
 		if (GameObject.Find("Treadmill").GetComponent<patternDrop>().level == counter)
 		{
 			counter = 0;
-			GameObject.Find ("Treadmill").GetComponent<patternDrop> ().roundInSeconds = 0;
 			GameObject.Find("Treadmill").GetComponent<patternDrop>().pattern.Clear();
 			GameObject.Find("Treadmill").GetComponent<patternDrop>().alreadyExists = false;
 			GameObject.Find("Treadmill").GetComponent<patternDrop>().spawnPattern();
 		}
-	}
-
-	public void setCounter(int c){
-		this.counter = c;
 	}
 }
