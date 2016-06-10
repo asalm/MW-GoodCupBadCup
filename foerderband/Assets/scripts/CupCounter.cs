@@ -17,7 +17,6 @@ public class CupCounter : MonoBehaviour {
         //Calls patternDrop methods to reset pattern and spawn new pattern
 		if (GameObject.Find("Treadmill").GetComponent<patternDrop>().level == destroyedCounter)
 		{
-
 			destroyedCounter = 0;
 			GameObject.Find ("Treadmill").GetComponent<patternDrop> ().roundInSeconds = 0;
 			GameObject.Find("Treadmill").GetComponent<patternDrop>().pattern.Clear();
