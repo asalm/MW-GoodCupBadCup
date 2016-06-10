@@ -34,21 +34,34 @@ public class patternDrop : MonoBehaviour {
 	float zPos = 0F;
 	float faktor = 4F; //Factor which decides the percentage of bad cups in one pattern
 
-	void Start () {
+    public int roundInSeconds = 0;
+	float zahl = 0f;
+
+    void Start () {
 		//First Spawn
 		spawnPattern ();
 	}
 
 	void Update () {
-		/*time += Time.deltaTime;
-		if (time >= 7 && GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive == false) {
-			deletePattern ();
-			spawnPattern ();
-		} else if (time >= 12 && GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive == true) {
-			deletePattern();
-			spawnPattern ();
-		}*/
-	}
+       
+
+		zahl = zahl + Time.deltaTime;
+
+		if (zahl >= 1.0f) {
+			zahl = 0;
+			roundInSeconds+=1;
+		}
+
+        if (roundInSeconds >= 12)
+        {
+            GameObject.Find("UltimateCollider").GetComponent<CupCounter>().setCounter(0);
+            deletePattern();
+
+            GameObject.Find("Treadmill").GetComponent<patternDrop>().alreadyExists = false;
+            GameObject.Find("Treadmill").GetComponent<patternDrop>().spawnPattern();
+            roundInSeconds = 0;
+        }
+}
 
 	//Called in Update() or CupCounter.cs
 	public void spawnPattern(){
