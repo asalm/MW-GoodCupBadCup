@@ -6,21 +6,26 @@ using System.Collections;
 */
 
 public class CupCounter : MonoBehaviour {
-	private int counter = 0;
+	private int destroyedCounter = 0;
 	
 	void OnTriggerEnter(Collider other)
 	{
-		counter++;
+		destroyedCounter++;
 		
 		Destroy(other.gameObject);
 
         //Calls patternDrop methods to reset pattern and spawn new pattern
-		if (GameObject.Find("Treadmill").GetComponent<patternDrop>().level == counter)
+		if (GameObject.Find("Treadmill").GetComponent<patternDrop>().level == destroyedCounter)
 		{
-			counter = 0;
+			destroyedCounter = 0;
 			GameObject.Find("Treadmill").GetComponent<patternDrop>().pattern.Clear();
 			GameObject.Find("Treadmill").GetComponent<patternDrop>().alreadyExists = false;
 			GameObject.Find("Treadmill").GetComponent<patternDrop>().spawnPattern();
 		}
 	}
+
+    public void updateCounter()
+    {
+        destroyedCounter++;
+    }
 }

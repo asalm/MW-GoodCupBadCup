@@ -7,10 +7,14 @@ using System.Collections;
 
 public class ExplosionScript : MonoBehaviour {
 
-	/*
+    private float waitingTime = 0.05f;
+    private bool destroyable = false;
+    GameObject bomb;
+
+    /*
 	*Bomb explodes when it's touched
 	*/
-	void Start(){
+    void Start(){
 	}
 	void OnMouseDrag(){
 		explosion ();
@@ -40,7 +44,22 @@ public class ExplosionScript : MonoBehaviour {
 	void explosion(){
 		//Object turns invisible and expands rapidly
 		GetComponent<Renderer>().enabled = false;
-		GameObject explosion = GameObject.Find("Bomb(Clone)");
-		explosion.transform.localScale += new Vector3 (2f, 0f, 2f);
-	}
+		bomb = GameObject.Find("Bomb(Clone)");
+		bomb.transform.localScale += new Vector3 (2f, 0f, 2f);
+
+        StartCoroutine(delayedDelete());
+    }
+
+    //Delete Bomb after explosion
+    IEnumerator delayedDelete()
+    {
+        yield return new WaitForSeconds(waitingTime);
+        deleteBomb();
+    }
+
+    void deleteBomb()
+    {
+         bomb.SetActive(false);
+         GameObject.Find("UltimateCollider").GetComponent<CupCounter>().updateCounter();       
+    }
 }
