@@ -20,8 +20,11 @@ public class patternDrop : MonoBehaviour {
 
 	//Measures of the pattern-grid
 	private int gridWidth = 2;
-	private int gridMin = 0;
-	private int gridMax = 5;
+	private int gridMinX = -2;
+	private int gridMaxX = 3;
+
+    private int gridMinZ = 0;
+    private int gridMaxZ = 5;
 
 	private GameObject go; //Filler object 
 	public bool alreadyExists = false; 
@@ -78,17 +81,16 @@ public class patternDrop : MonoBehaviour {
 		while(counter < level) {
 
 			//Random Position in Grid 
-			xPos = Random.Range(gridMin,gridMax) * gridWidth;
-			zPos = Random.Range(gridMin,gridMax) * gridWidth;
-
+			xPos = Random.Range(gridMinX,gridMaxX) * gridWidth;
+			zPos = Random.Range(gridMinZ,gridMaxZ) * gridWidth;
 
 			//Powerup spawn (randomized, only when time is an even number)
 			if(isFreeSpace()){
 
-				if(!alreadyExists && GUI.timeAnz > 0 && GUI.timeAnz%1==0){
+				if(!alreadyExists && GUI.timeAnz > 0 && GUI.timeAnz%3==0){
 
 					//PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
-					go = Instantiate(powerUp[/*(int)Random.Range(0f,powerUp.Length)*/0], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+					go = Instantiate(powerUp[(int)Random.Range(0f,powerUp.Length)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
 					pattern.Add (go); //add instance of GameObject to the List
 					alreadyExists = true;
 					counter++;

@@ -2114,6 +2114,7 @@ MonoBehaviour:
   maxLevel: 18
   alreadyExists: 0
   time: 0
+  roundInSeconds: 0
 --- !u!33 &1874840583
 MeshFilter:
   m_ObjectHideFlags: 0
@@ -2128,8 +2129,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1874840580}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.1, y: -0, z: 3.16}
-  m_LocalScale: {x: 1.4790686, y: 1.3722675, z: 1.4272618}
+  m_LocalPosition: {x: 4.57, y: -0, z: 3.16}
+  m_LocalScale: {x: 1.7926064, y: 1.3722675, z: 1.4272618}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 10
