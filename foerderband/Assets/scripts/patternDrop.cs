@@ -72,7 +72,7 @@ public class patternDrop : MonoBehaviour {
 			//Powerup spawn (randomized, only when time is an even number)
 			if(isFreeSpace()){
 
-				if(!alreadyExists && GUI.timeAnz > 0 && GUI.timeAnz%2==0){
+				if(!alreadyExists && GUI.timeAnz > 0 && GUI.timeAnz%1==0){
 
 					//PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
 					go = Instantiate(powerUp[/*(int)Random.Range(0f,powerUp.Length)*/0], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;

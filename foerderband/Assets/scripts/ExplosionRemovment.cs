@@ -15,8 +15,9 @@ public class ExplosionRemovment : MonoBehaviour {
 
 	void OnTriggerEnter(Collider other){
 		if (other.name == "Bomb(Clone)") {
-			other.gameObject.GetComponent<ExplosionScript>().enabled = false;
-			Debug.Log ("Test");
+            Debug.Log("Removed!");
+            Destroy(other.gameObject.GetComponent<ExplosionScript>());
+			//other.gameObject.GetComponent<ExplosionScript>().enabled = false;
 		}
 	}
 }
