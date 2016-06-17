@@ -20,8 +20,13 @@ public class patternDrop : MonoBehaviour {
 
 	//Measures of the pattern-grid
 	private int gridWidth = 2;
+<<<<<<< HEAD
     private int gridMinX = -2;
     private int gridMaxX = 3;
+=======
+	private int gridMinX = -2;
+	private int gridMaxX = 3;
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 
     private int gridMinZ = 0;
     private int gridMaxZ = 5;
@@ -37,15 +42,26 @@ public class patternDrop : MonoBehaviour {
 	float zPos = 0F;
 	float faktor = 4F; //Factor which decides the percentage of bad cups in one pattern
 
+<<<<<<< HEAD
 	public int roundInSeconds=0;
 	float zahl=0f;
 
 	void Start () {
+=======
+    public int roundInSeconds = 0;
+	float zahl = 0f;
+
+    void Start () {
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 		//First Spawn
 		spawnPattern ();
 	}
 
 	void Update () {
+<<<<<<< HEAD
+=======
+       
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 
 		zahl = zahl + Time.deltaTime;
 
@@ -54,6 +70,7 @@ public class patternDrop : MonoBehaviour {
 			roundInSeconds+=1;
 		}
 
+<<<<<<< HEAD
 		if (roundInSeconds >= 12) {
 			GameObject.Find("UltimateCollider").GetComponent<CupCounter>().setCounter(0);
 			deletePattern ();
@@ -62,6 +79,18 @@ public class patternDrop : MonoBehaviour {
 			roundInSeconds = 0;
 		}
 	}
+=======
+        if (roundInSeconds >= 12)
+        {
+            GameObject.Find("UltimateCollider").GetComponent<CupCounter>().setCounter(0);
+            deletePattern();
+
+            GameObject.Find("Treadmill").GetComponent<patternDrop>().alreadyExists = false;
+            GameObject.Find("Treadmill").GetComponent<patternDrop>().spawnPattern();
+            roundInSeconds = 0;
+        }
+}
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 
 	//Called in Update() or CupCounter.cs
 	public void spawnPattern(){
@@ -81,6 +110,7 @@ public class patternDrop : MonoBehaviour {
 			xPos = Random.Range(gridMinX,gridMaxX) * gridWidth;
 			zPos = Random.Range(gridMinZ,gridMaxZ) * gridWidth;
 
+<<<<<<< HEAD
 
 			//Powerup spawn (randomized, only when time is an even number)
 			if(isFreeSpace()){
@@ -89,6 +119,15 @@ public class patternDrop : MonoBehaviour {
 
 					//PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
 					go = Instantiate(powerUp[/*(int)Random.Range(0f,powerUp.Length)*/0], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+=======
+			//Powerup spawn (randomized, only when time is an even number)
+			if(isFreeSpace()){
+
+				if(!alreadyExists && GUI.timeAnz > 0 && GUI.timeAnz%3==0){
+
+					//PowerUp-Spawn, immer zu Zeitpunkten, die durch einen gewissen Faktor geteilt, den Rest 0 besitzen
+					go = Instantiate(powerUp[(int)Random.Range(0f,powerUp.Length)], new Vector3(xPos, yPos, zPos), Quaternion.identity) as GameObject;
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 					pattern.Add (go); //add instance of GameObject to the List
 					alreadyExists = true;
 					counter++;

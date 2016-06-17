@@ -8,8 +8,11 @@ using System.Collections;
 public class scoreObserverBad : MonoBehaviour {
 
 	public Camera mainCam;
+<<<<<<< HEAD
     public AudioClip life_down, life_up, rotate, freeze;
     public AudioSource sounds;
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 
 	void OnTriggerEnter(Collider other)
 	{
@@ -18,6 +21,7 @@ public class scoreObserverBad : MonoBehaviour {
 		} else if (other.tag.Equals ("PowerUp")) {
 			switch (other.gameObject.name) {
 			case "OneUp(Clone)":
+<<<<<<< HEAD
                     if (GameObject.Find("Main Camera").GetComponent<GUI>().leben < 5)
                     {         //if powerUp was OneUp the live will increase
                         sounds = GetComponent<AudioSource>();
@@ -39,6 +43,17 @@ public class scoreObserverBad : MonoBehaviour {
                 sounds.clip = rotate;
                 sounds.Play();
                 mainCam.GetComponent<InvertScreen> ().i = 0;
+=======
+				if (GameObject.Find ("Main Camera").GetComponent<GUI> ().leben < 5)			//if powerUp was OneUp the live will increase
+					GameObject.Find ("Main Camera").GetComponent<GUI> ().leben++;
+				break;
+			case "SlowDown(Clone)":
+				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownStart = GUI.timeAnz;	//if powerUp was SlowDown the cups will move slower
+				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive = true;
+				break;
+			case "Invert(Clone)":
+				mainCam.GetComponent<InvertScreen> ().i = 0;
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownStart = GUI.timeAnz;		//if powerup was Invert the Camera will rotate with animation
 				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownDuration = 1.4f;
 				GameObject.Find ("Treadmill").GetComponent<TreadmillRegulator> ().slowDownActive = true;
@@ -49,10 +64,13 @@ public class scoreObserverBad : MonoBehaviour {
 			}
 			
 		} else {
+<<<<<<< HEAD
             sounds = GetComponent<AudioSource>();
             sounds.clip = life_down;
             sounds.Play();
             
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 			GameObject.Find ("Main Camera").GetComponent<GUI> ().leben--;
 			GameObject.Find ("Main Camera").GetComponent<GUI> ().lifeCounter = GUI.timeAnz + 2;
 		}

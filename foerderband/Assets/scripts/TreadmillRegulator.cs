@@ -13,7 +13,11 @@ public class TreadmillRegulator : MonoBehaviour {
 	
 	public float publicSpeed;
 	private float slowSpeed = 1f;
+<<<<<<< HEAD
 	public float slowDownDuration = 5;
+=======
+	public float slowDownDuration = 3;
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 	
 	void Start () {
 		if (slowDownActive) {
@@ -39,8 +43,11 @@ public class TreadmillRegulator : MonoBehaviour {
 
         //End of slowDown
 		if (slowDownActive && slowDownStart + slowDownDuration <= GUI.timeAnz) {
+<<<<<<< HEAD
             if (slowDownDuration == 1.4f)
                 slowDownDuration = 5;
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 			slowDownActive = false;
 			publicSpeed = speed;
 		}

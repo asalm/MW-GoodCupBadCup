@@ -231,7 +231,10 @@ GameObject:
   - 124: {fileID: 1782057358}
   - 81: {fileID: 1782057357}
   - 114: {fileID: 1782057362}
+<<<<<<< HEAD
   - 82: {fileID: 1782057363}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -435,6 +438,7 @@ MonoBehaviour:
     m_FixedHeight: 0
     m_StretchWidth: 1
     m_StretchHeight: 0
+<<<<<<< HEAD
 --- !u!82 &1782057363
 AudioSource:
   m_ObjectHideFlags: 0
@@ -505,3 +509,5 @@ AudioSource:
       tangentMode: 0
     m_PreInfinity: 2
     m_PostInfinity: 2
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4

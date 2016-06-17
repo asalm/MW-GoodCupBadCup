@@ -79,7 +79,10 @@ GameObject:
   - 54: {fileID: 5495092}
   - 114: {fileID: 11449410}
   - 114: {fileID: 11498712}
+<<<<<<< HEAD
   - 82: {fileID: 8229508}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Layer: 0
   m_Name: Bomb
   m_TagString: PowerUp
@@ -128,7 +131,10 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0, y: 0, z: -0.18728484}
   m_LocalScale: {x: 100, y: 100.00001, z: 100.00001}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Children: []
   m_Father: {fileID: 423812}
   m_RootOrder: 5
@@ -141,7 +147,10 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 1.7712634, y: 0.29444027, z: -3.3938413}
   m_LocalScale: {x: 207.88539, y: 35.81082, z: 35.81082}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Children: []
   m_Father: {fileID: 423812}
   m_RootOrder: 3
@@ -154,7 +163,10 @@ Transform:
   m_LocalRotation: {x: -0.7071068, y: 0, z: -0, w: 0.7071067}
   m_LocalPosition: {x: 0.5484067, y: 1.868815, z: 0.3459326}
   m_LocalScale: {x: 0.7392134, y: 0.7392134, z: 0.7392134}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Children: []
   m_Father: {fileID: 423812}
   m_RootOrder: 2
@@ -167,7 +179,10 @@ Transform:
   m_LocalRotation: {x: 0.21061137, y: 0.90524006, z: -0.089281626, w: -0.35806713}
   m_LocalPosition: {x: -7.4811316, y: 5.343665, z: 6.5076394}
   m_LocalScale: {x: 99.99999, y: 100.00001, z: 100}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Children: []
   m_Father: {fileID: 423812}
   m_RootOrder: 1
@@ -180,7 +195,10 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 5.608701, y: 0.46, z: 4.473449}
   m_LocalScale: {x: 0.6, y: 0.6, z: 0.6}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Children:
   - {fileID: 430756}
   - {fileID: 423580}
@@ -199,7 +217,10 @@ Transform:
   m_LocalRotation: {x: 0.16907571, y: -0.75588036, z: 0.27217132, w: 0.57094747}
   m_LocalPosition: {x: -4.0762453, y: 5.903862, z: -1.005454}
   m_LocalScale: {x: 100.000015, y: 100, z: 100.00001}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Children: []
   m_Father: {fileID: 423812}
   m_RootOrder: 4
@@ -212,7 +233,10 @@ Transform:
   m_LocalRotation: {x: -0.05400971, y: -0.121649966, z: 0.49490705, w: 0.8586916}
   m_LocalPosition: {x: 0.3919932, y: 2.0522487, z: -0.041941106}
   m_LocalScale: {x: 31.333054, y: 31.333055, z: 31.333054}
+<<<<<<< HEAD
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
   m_Children: []
   m_Father: {fileID: 423812}
   m_RootOrder: 0
@@ -390,6 +414,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+<<<<<<< HEAD
 --- !u!82 &8229508
 AudioSource:
   m_ObjectHideFlags: 1
@@ -464,6 +489,8 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 --- !u!114 &11449410
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -476,8 +503,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 50
+<<<<<<< HEAD
   soundsCup: {fileID: 0}
   pickupSound: {fileID: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 --- !u!114 &11498712
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -489,8 +519,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d2697ba1370f73b48afaf2b162cad7f2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< HEAD
   explode: {fileID: 8300000, guid: 6de0b13683012a44585e6f7420982631, type: 3}
   bomb: {fileID: 0}
+=======
+>>>>>>> 45e5eb1f1939b23961abd22359e7e965a9fe20c4
 --- !u!136 &13600238
 CapsuleCollider:
   m_ObjectHideFlags: 1
