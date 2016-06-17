@@ -28,7 +28,7 @@ public class TreadmillRegulator : MonoBehaviour {
         //Speed increases every 10 seconds if slowdown is not active
 		if (!slowDownActive && GUI.timeAnz % 10 == 0)
 		{
-			speed += deltaSpeed * Time.deltaTime;
+			speed += (deltaSpeed * Time.deltaTime)/10;
 			publicSpeed = speed;
 		}
 		else if (slowDownActive)
