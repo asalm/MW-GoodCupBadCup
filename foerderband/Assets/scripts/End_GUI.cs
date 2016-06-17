@@ -10,15 +10,17 @@ using System.Collections;
 public class End_GUI : MonoBehaviour {
 	private int score;
 
-	public GUIStyle fontStyle = new GUIStyle();
-	public GUIStyle pauseButton = new GUIStyle();
+	private GUIStyle fontStyleKlein = new GUIStyle();
+	private GUIStyle fontStyleGross = new GUIStyle();
+	public GUIStyle neustart = new GUIStyle();
+	public GUIStyle zurueck = new GUIStyle();
 
 	private float screenWidth = Screen.width;
 	private float screenHeight = Screen.height;
 
 	void start(){
 	}
-	
+
 	void Update(){
 
 	}
@@ -26,28 +28,50 @@ public class End_GUI : MonoBehaviour {
 
 	void OnGUI() {
 		score = GUI.score * GUI.wave;
-		pauseButton.fixedWidth = screenWidth / 6;
-		pauseButton.fixedHeight = screenHeight / 6;
-		pauseButton.fontSize = (int)screenWidth / 38;
-		fontStyle.fontSize = (int)screenWidth / 38;
+		fontStyleKlein.fontSize = (int)screenWidth / 35;
+		fontStyleGross.fontSize = (int)screenWidth / 25;
+		fontStyleKlein.alignment = TextAnchor.MiddleCenter;
+		fontStyleGross.alignment = TextAnchor.MiddleCenter;
 
-		Vector2 contentOffset = pauseButton.contentOffset;
-		contentOffset.y = pauseButton.fixedHeight/3.3333f;
-		pauseButton.contentOffset = contentOffset;
+		neustart.fixedWidth = Screen.width/6;
+		neustart.fixedHeight = Screen.height/4;
+		zurueck.fixedWidth = Screen.width/8; //80
+		zurueck.fixedHeight = Screen.height / 12; //39
 
 
-		GUILayout.BeginArea (new Rect (Screen.width-Screen.width/2 - pauseButton.fixedWidth/2, Screen.height - Screen.height / 2 - pauseButton.fixedHeight / 2, 500, 500));
+
+		//Score usw.
+		GUILayout.BeginArea (new Rect (Screen.width/2-250, Screen.height/5+5, 500, 500));
 		//Die erreichten Werte werden untereinander angezeigt
-		GUILayout.Label ("Erreichte Welle: " + GUI.wave, fontStyle);
-		GUILayout.Label ("Erreichter Punktestand: " + GUI.score, fontStyle);
-		GUILayout.Label("Final Score: " + score, fontStyle);
+		GUILayout.Label ("Wave", fontStyleKlein);
+		GUILayout.Label ("" + GUI.wave, fontStyleGross);
+		GUILayout.Label ("Score", fontStyleKlein);
+		GUILayout.Label ("" + GUI.score, fontStyleGross);
+		GUILayout.Label("Final Score", fontStyleKlein);
+		GUILayout.Label ("" + score, fontStyleGross);
 
-        if (GUILayout.Button("Menü", pauseButton))
-		{
-			//Wieder zum Menü
+		/*if (GUILayout.Button("Menü", pauseButton))
+        {
+            //Wieder zum Menü
             Application.LoadLevel(0);
 
+        }*/
+		GUILayout.EndArea ();
+		GUILayout.BeginArea (new Rect(Screen.width/2-neustart.fixedWidth/2, Screen.height - Screen.height/4, 500, 500));
+		if (GUILayout.Button ("", neustart)) {
+			Application.LoadLevel(1);
+			GUI.timeAnz =0;
+			GUI.score = 0;
+			score = 0;
+			GUI.wave = 0;
+		}
+		GUILayout.EndArea ();
+
+		GUILayout.BeginArea (new Rect(10, Screen.height-40, 200,200));
+		if(GUILayout.Button("", zurueck)){
+			Application.LoadLevel (0);
 		}
 		GUILayout.EndArea ();
 	}
 }
+
